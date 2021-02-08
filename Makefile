@@ -13,6 +13,9 @@ clean:
 %: %.go
 	go build $^
 
+%: %.hs
+	ghc -o $@ $^
+
 %: %.rs
 	rustc -O -o $@ $^
 
