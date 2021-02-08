@@ -16,5 +16,5 @@ func main() {
 		log.Fatal(err)
 	}
 
-	fmt.Println("length: ", len(data))
+	fmt.Println("length:", len(data))
 }
