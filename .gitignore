@@ -3,3 +3,5 @@ readall_c
 readall_cpp
 readall_go
 readall_rs
+readall_hs*
+!readall_hs.hs
