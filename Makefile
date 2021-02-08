@@ -1,7 +1,7 @@
 CFLAGS += -std=c17 -Wall -Wextra -O3
 CXXFLAGS += -std=c++17 -Wall -Wextra -O3
 
-OUT = readall_c readall_cpp readall_go readall_rs
+OUT = readall_c readall_cpp readall_go readall_hs readall_rs
 
 all: $(OUT)
 
