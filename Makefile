@@ -8,7 +8,12 @@ all: $(OUT)
 clean:
 	$(RM) $(OUT)
 
-.PHONY: all clean
+run: $(OUT)
+	@for exe in $^; do \
+		\time --format "%C\t%e\t%M" ./$$exe <rand.data >/dev/null; \
+	done | column -t
+
+.PHONY: all clean run
 
 %: %.go
 	go build $^
