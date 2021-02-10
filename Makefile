@@ -9,9 +9,12 @@ clean:
 	$(RM) $(OUT)
 
 run: $(OUT) rand.data
-	@for exe in $(OUT); do \
-		\time --format "%C\t%e\t%M" ./$$exe <rand.data >/dev/null; \
-	done | column -t
+	@( \
+		\time --format "%C\t%e\t%M" ./readall_c 128000 <rand.data >/dev/null; \
+		for exe in $(OUT); do \
+			\time --format "%C\t%e\t%M" ./$$exe <rand.data >/dev/null; \
+		done \
+	) 2>&1 | tr '\t' '|' | column -s '|' -t
 
 .PHONY: all clean run
 
