@@ -8,8 +8,8 @@ all: $(OUT)
 clean:
 	$(RM) $(OUT)
 
-run: $(OUT)
-	@for exe in $^; do \
+run: $(OUT) rand.data
+	@for exe in $(OUT); do \
 		\time --format "%C\t%e\t%M" ./$$exe <rand.data >/dev/null; \
 	done | column -t
 
