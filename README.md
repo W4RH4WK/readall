@@ -1,6 +1,6 @@
 # Read all from Stdin
 
 ```
-sudo apt install build-essential g++ golang rustc ghc
+sudo apt install build-essential g++ golang rustc ghc time
 make run
 ```
